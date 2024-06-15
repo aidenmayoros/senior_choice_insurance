@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
 
 	return (
 		<nav className='bg-stone-950 text-white p-4'>
-			<div className='max-w-7xl mx-auto sm:px-6'>
+			<div className='sm:px-6'>
 				<div className='flex items-center justify-between h-16'>
 					<div className='flex items-center'>
 						<Link to='/'>
