@@ -84,7 +84,10 @@ const Navbar: React.FC = () => {
 				</div>
 			</div>
 
-			<div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
+			<div
+				className={`${
+					isOpen ? 'block' : 'hidden'
+				} md:hidden absolute top-20 left-0 bg-stone-950 w-screen`}>
 				<div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
 					<Link
 						to='/'
