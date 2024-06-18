@@ -11,10 +11,12 @@ const Footer: React.FC = () => {
 						<h2 className='text-3xl md:text-xl font-bold mb-2'>
 							Ready to get started?
 						</h2>
-						<p className='text-lg'>Dial 1-866-846-9802 to learn more today!</p>
+						<p className='text-lg w-4/5'>
+							Dial 1-866-846-9802 to learn more today!
+						</p>
 					</div>
 					<div>
-						<h2 className='text-xl font-bold mb-2'>Email Us</h2>
+						<h2 className='text-lg font-bold'>Email</h2>
 						<p className='text-lg'>agency@srchoice.us</p>
 					</div>
 				</div>
