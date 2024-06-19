@@ -9,11 +9,11 @@ const About: React.FC = () => {
 				style={{
 					backgroundImage: `url(${waves})`,
 				}}></div>
-			<div className='relative z-10 m-8 text-center'>
-				<h1 className='text-xl lg:text-2xl font-bold text-center'>
+			<div className='relative z-10 text-center m-0'>
+				<h1 className='text-xl lg:text-2xl font-bold text-center pt-5 pb-5 text-green-600'>
 					WHO WE ARE, AND WHAT WE DO
 				</h1>
-				<p className='mt-4 text-lg text-center mx-auto lg:w-6/12'>
+				<p className='mt-4 text-lg text-center mx-auto lg:w-6/12 pb-10 px-5'>
 					At Senior Choice Insurance, we strive to make the insurance selection
 					process easy and convenient, putting our clients needs at the
 					forefront of everything we do. We believe insurance is more than just
