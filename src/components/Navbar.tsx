@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import logo from '../assets/images/logos/Senior Choice Insurance.png';
 
 const Navbar: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
-	const handleLinkClick = () => {
+	const handleLinkClick = (id: string) => {
 		setIsOpen(false);
+		scrollToSection(id);
+	};
+
+	const scrollToSection = (id: string) => {
+		const element = document.getElementById(id);
+		if (element) {
+			element.scrollIntoView({ behavior: 'smooth' });
+		}
 	};
 
 	return (
@@ -14,31 +21,26 @@ const Navbar: React.FC = () => {
 			<div className='sm:px-6'>
 				<div className='flex items-center justify-between h-16'>
 					<div className='flex items-center'>
-						<Link to='/'>
+						<a href='#home'>
 							<img src={logo} alt='Company Logo' className='w-48 md:w-72' />
-						</Link>
+						</a>
 						<div className='hidden md:block'>
 							<div className='ml-10 flex items-baseline space-x-4'>
-								<Link
-									to='/'
-									className='hover:bg-green-600 px-3 py-2 rounded-md text-sm font-medium'>
-									Home
-								</Link>
-								<Link
-									to='/about'
+								<button
+									onClick={() => scrollToSection('about')}
 									className='hover:bg-green-600 px-3 py-2 rounded-md text-sm font-medium'>
 									About
-								</Link>
-								<Link
-									to='/services'
+								</button>
+								<button
+									onClick={() => scrollToSection('services')}
 									className='hover:bg-green-600 px-3 py-2 rounded-md text-sm font-medium'>
 									Services
-								</Link>
-								<Link
-									to='/contact'
+								</button>
+								<button
+									onClick={() => scrollToSection('contact')}
 									className='hover:bg-green-600 px-3 py-2 rounded-md text-sm font-medium'>
 									Contact Us
-								</Link>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -87,32 +89,23 @@ const Navbar: React.FC = () => {
 			<div
 				className={`${
 					isOpen ? 'block' : 'hidden'
-				} md:hidden absolute top-20 left-0 bg-stone-950 w-screen`}>
+				} md:hidden absolute top-18 left-0 w-full bg-stone-950 z-10`}>
 				<div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
-					<Link
-						to='/'
-						className='block px-3 py-2 rounded-md text-base font-medium hover:bg-green-600'
-						onClick={handleLinkClick}>
-						Home
-					</Link>
-					<Link
-						to='/about'
-						className='block px-3 py-2 rounded-md text-base font-medium hover:bg-green-600'
-						onClick={handleLinkClick}>
+					<button
+						onClick={() => handleLinkClick('about')}
+						className='block px-3 py-2 rounded-md text-base font-medium hover:bg-green-600'>
 						About
-					</Link>
-					<Link
-						to='/services'
-						className='block px-3 py-2 rounded-md text-base font-medium hover:bg-green-600'
-						onClick={handleLinkClick}>
+					</button>
+					<button
+						onClick={() => handleLinkClick('services')}
+						className='block px-3 py-2 rounded-md text-base font-medium hover:bg-green-600'>
 						Services
-					</Link>
-					<Link
-						to='/contact'
-						className='block px-3 py-2 rounded-md text-base font-medium hover:bg-green-600'
-						onClick={handleLinkClick}>
+					</button>
+					<button
+						onClick={() => handleLinkClick('contact')}
+						className='block px-3 py-2 rounded-md text-base font-medium hover:bg-green-600'>
 						Contact Us
-					</Link>
+					</button>
 				</div>
 			</div>
 		</nav>
