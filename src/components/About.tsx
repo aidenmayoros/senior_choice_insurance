@@ -9,8 +9,8 @@ const About: React.FC = () => {
 				style={{
 					backgroundImage: `url(${waves})`,
 				}}></div>
-			<div className='relative z-10 text-center m-0'>
-				<h1 className='text-2xl lg:text-2xl font-bold text-center pt-5 pb-4 text-green-600 w-4/5 lg:w-full mx-auto'>
+			<div className='relative z-10 m-0'>
+				<h1 className='text-2xl lg:text-2xl font-bold pt-5 pb-4 text-green-600 w-4/5 lg:w-full mx-auto text-center'>
 					WHO WE ARE, AND WHAT WE DO
 				</h1>
 				<p className='mt-4 text-lg text-center mx-auto lg:w-6/12 pb-10 px-5'>
