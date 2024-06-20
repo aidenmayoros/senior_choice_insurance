@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
 						</p>
 					</div>
 					<div>
-						<h2 className='text-3xl md:text-xl font-bold mb-2'>Email</h2>
+						<h2 className='text-3xl md:text-xl font-bold mb-2'>Email Us</h2>
 						<p className='text-lg'>agency@srchoice.us</p>
 					</div>
 				</div>

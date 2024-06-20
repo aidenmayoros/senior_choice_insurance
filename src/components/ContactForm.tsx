@@ -27,7 +27,7 @@ const ContactForm: React.FC = () => {
 	};
 
 	return (
-		<div className='bg-[#F8F8F8] p-6 rounded-lg shadow-lg lg:w-1/2 mx-auto'>
+		<div className='bg-[#F8F8F8] p-6 rounded-lg shadow-lg lg:w-1/2 mx-auto mb-10'>
 			<form onSubmit={handleSubmit} className='space-y-4'>
 				<div>
 					<label
