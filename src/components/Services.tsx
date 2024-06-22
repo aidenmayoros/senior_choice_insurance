@@ -4,7 +4,7 @@ import ServicesImg from '../assets/images/services_hero.jpg';
 const Services: React.FC = () => {
 	return (
 		<div className='bg-[#F8F8F8]'>
-			<h1 className='text-2xl lg:text-2xl font-bold text-center pt-5 pb-4 text-green-600 w-11/12 lg:w-full mx-auto'>
+			<h1 className='text-2xl lg:text-2xl font-bold text-center pt-5 pb-4 text-green-600 w-11/12 mx-auto'>
 				DISCOVER OUR SPECIALIZED INSURANCE OFFERINGS
 			</h1>
 			<div className='flex flex-col md:flex-row'>
