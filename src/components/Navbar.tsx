@@ -21,9 +21,7 @@ const Navbar: React.FC = () => {
 			<div className='sm:px-6'>
 				<div className='flex items-center justify-between h-16'>
 					<div className='flex items-center'>
-						<a href='#home'>
-							<img src={logo} alt='Company Logo' className='w-48 md:w-72' />
-						</a>
+						<img src={logo} alt='Company Logo' className='w-48 md:w-72' />
 						<div className='hidden md:block'>
 							<div className='ml-10 flex items-baseline space-x-4'>
 								<button
