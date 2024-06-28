@@ -26,17 +26,17 @@ const Navbar: React.FC = () => {
 							<div className='ml-10 flex items-baseline space-x-4'>
 								<button
 									onClick={() => scrollToSection('about')}
-									className='hover:bg-green-600 px-3 py-2 rounded-md text-sm font-medium'>
+									className='hover:bg-[#5dbd5c] px-3 py-2 rounded-md text-sm font-medium'>
 									About
 								</button>
 								<button
 									onClick={() => scrollToSection('services')}
-									className='hover:bg-green-600 px-3 py-2 rounded-md text-sm font-medium'>
+									className='hover:bg-[#5dbd5c] px-3 py-2 rounded-md text-sm font-medium'>
 									Services
 								</button>
 								<button
 									onClick={() => scrollToSection('contact')}
-									className='hover:bg-green-600 px-3 py-2 rounded-md text-sm font-medium'>
+									className='hover:bg-[#5dbd5c] px-3 py-2 rounded-md text-sm font-medium'>
 									Contact Us
 								</button>
 							</div>
@@ -91,17 +91,17 @@ const Navbar: React.FC = () => {
 				<div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
 					<button
 						onClick={() => handleLinkClick('about')}
-						className='block px-3 py-2 rounded-md text-base font-medium hover:bg-green-600'>
+						className='hover:bg-[#5dbd5c] block px-3 py-2 rounded-md text-base font-medium'>
 						About
 					</button>
 					<button
 						onClick={() => handleLinkClick('services')}
-						className='block px-3 py-2 rounded-md text-base font-medium hover:bg-green-600'>
+						className='hover:bg-[#5dbd5c] block px-3 py-2 rounded-md text-base font-medium'>
 						Services
 					</button>
 					<button
 						onClick={() => handleLinkClick('contact')}
-						className='block px-3 py-2 rounded-md text-base font-medium hover:bg-green-600'>
+						className='hover:bg-[#5dbd5c] block px-3 py-2 rounded-md text-base font-medium'>
 						Contact Us
 					</button>
 				</div>
