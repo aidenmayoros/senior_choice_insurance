@@ -42,7 +42,7 @@ const ContactForm: React.FC = () => {
 						value={formData.name}
 						onChange={handleChange}
 						required
-						className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#5dbd5c] focus:border-[#5dbd5c]'
+						className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#72F072] focus:border-[#72F072]'
 					/>
 				</div>
 				<div>
@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
 						value={formData.email}
 						onChange={handleChange}
 						required
-						className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#5dbd5c] focus:border-[#5dbd5c]'
+						className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#72F072] focus:border-[#72F072]'
 					/>
 				</div>
 				<div>
@@ -74,7 +74,7 @@ const ContactForm: React.FC = () => {
 						value={formData.phone}
 						onChange={handleChange}
 						required
-						className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-[#5dbd5c]'
+						className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#72F072] focus:border-[#72F072]'
 					/>
 				</div>
 				<div>
@@ -89,13 +89,13 @@ const ContactForm: React.FC = () => {
 						value={formData.message}
 						onChange={handleChange}
 						required
-						className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#5dbd5c] focus:border-[#5dbd5c]'
+						className='mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-[#72F072] focus:border-[#72F072]'
 					/>
 				</div>
 				<div className='text-center'>
 					<button
 						type='submit'
-						className='w-full md:w-auto px-4 py-2 bg-[#5dbd5c] text-white font-semibold rounded-md shadow-md hover:bg-green-700 transition duration-300'>
+						className='w-full md:w-auto px-4 py-2 bg-[#72F072] font-semibold rounded-md shadow-md hover:bg-green-700 hover:text-white transition duration-300'>
 						Send Message
 					</button>
 				</div>
