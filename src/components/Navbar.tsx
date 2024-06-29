@@ -122,7 +122,7 @@ const Navbar: React.FC = () => {
 						Contact Us
 					</button>
 					<Link
-						to='/career'
+						to='/careers'
 						className='hover:bg-[#72F072] hover:text-black block px-3 py-2 rounded-md text-base font-medium'
 						onClick={() => setIsOpen(false)}>
 						Career
