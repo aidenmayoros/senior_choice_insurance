@@ -1,29 +1,18 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import MainHero from './components/MainHero';
-import About from './components/About';
-import Services from './components/Services';
-import Contact from './components/ContactUs';
-import Footer from './components/Footer';
+import Home from './pages/Home'; // Your main page component
+import Career from './pages/Career';
 
 function App() {
 	return (
-		<div className='flex flex-col min-h-screen'>
+		<Router>
 			<Navbar />
-			<div className='flex-grow'>
-				<MainHero />
-				<div id='about'>
-					<About />
-				</div>
-				<div id='services'>
-					<Services />
-				</div>
-				<div id='contact'>
-					<Contact />
-				</div>
-			</div>
-			<Footer />
-		</div>
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/careers' element={<Career />} />
+			</Routes>
+		</Router>
 	);
 }
 

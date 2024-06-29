@@ -1,19 +1,26 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import logo from '../assets/images/logos/Senior Choice Insurance.png';
 
 const Navbar: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const navigate = useNavigate();
 
 	const handleLinkClick = (id: string) => {
 		setIsOpen(false);
-		scrollToSection(id);
+		navigateAndScroll(id);
 	};
 
-	const scrollToSection = (id: string) => {
-		const element = document.getElementById(id);
-		if (element) {
-			element.scrollIntoView({ behavior: 'smooth' });
-		}
+	const navigateAndScroll = (id: string) => {
+		navigate('/');
+		setTimeout(() => {
+			scroller.scrollTo(id, {
+				duration: 1000,
+				delay: 0,
+				smooth: 'easeInOutQuart',
+			});
+		}, 200); // Adjust the delay as needed
 	};
 
 	return (
@@ -21,24 +28,34 @@ const Navbar: React.FC = () => {
 			<div className='sm:px-6'>
 				<div className='flex items-center justify-between h-16'>
 					<div className='flex items-center'>
-						<img src={logo} alt='Company Logo' className='w-48 md:w-72' />
+						<img
+							src={logo}
+							alt='Company Logo'
+							className='w-48 md:w-72 hover:cursor-pointer'
+							onClick={() => navigate('/')}
+						/>
 						<div className='hidden md:block'>
 							<div className='ml-10 flex items-baseline space-x-4'>
 								<button
-									onClick={() => scrollToSection('about')}
+									onClick={() => handleLinkClick('about')}
 									className='hover:bg-[#72F072] hover:text-black px-3 py-2 rounded-md text-sm font-medium'>
 									About
 								</button>
 								<button
-									onClick={() => scrollToSection('services')}
+									onClick={() => handleLinkClick('services')}
 									className='hover:bg-[#72F072] hover:text-black px-3 py-2 rounded-md text-sm font-medium'>
 									Services
 								</button>
 								<button
-									onClick={() => scrollToSection('contact')}
+									onClick={() => handleLinkClick('contact')}
 									className='hover:bg-[#72F072] hover:text-black px-3 py-2 rounded-md text-sm font-medium'>
 									Contact Us
 								</button>
+								<Link
+									to='/careers'
+									className='hover:bg-[#72F072] hover:text-black px-3 py-2 rounded-md text-sm font-medium'>
+									Join Us
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -104,6 +121,12 @@ const Navbar: React.FC = () => {
 						className='hover:bg-[#72F072] hover:text-black block px-3 py-2 rounded-md text-base font-medium'>
 						Contact Us
 					</button>
+					<Link
+						to='/career'
+						className='hover:bg-[#72F072] hover:text-black block px-3 py-2 rounded-md text-base font-medium'
+						onClick={() => setIsOpen(false)}>
+						Career
+					</Link>
 				</div>
 			</div>
 		</nav>
