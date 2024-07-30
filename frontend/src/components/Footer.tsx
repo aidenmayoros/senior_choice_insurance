@@ -1,3 +1,4 @@
+import React from 'react';
 import BackgroundImg from '../assets/images/footer_background.jpg';
 
 const Footer: React.FC = () => {

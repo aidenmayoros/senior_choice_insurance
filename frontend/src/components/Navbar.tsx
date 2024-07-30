@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { scroller } from 'react-scroll';
-import logo from '../assets/images/logos/Senior Choice Insurance.png';
+import logo from '../assets/images/logos/Senior_Choice_Insurance.png';
 
 const Navbar: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(false);

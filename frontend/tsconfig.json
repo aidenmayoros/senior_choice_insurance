@@ -23,7 +23,9 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "frontend/src"
+    "frontend/src",
+    "src",
+    "declarations.d.ts"
   ],
   "references": [
     {

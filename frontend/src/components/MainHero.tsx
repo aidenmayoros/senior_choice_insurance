@@ -1,3 +1,4 @@
+import React from 'react';
 import headerImg from '../assets/images/main_hero.jpg';
 
 const MainHero: React.FC = () => {
