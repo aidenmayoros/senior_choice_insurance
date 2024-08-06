@@ -14,10 +14,28 @@ const ContactForm: React.FC = () => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		// Handle form submission below
-		console.log('Form submitted', formData);
+
+		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(formData),
+			});
+
+			if (response.ok) {
+				alert('Message sent successfully!');
+			} else {
+				alert('Failed to send the message. Please try again later.');
+			}
+		} catch (error) {
+			console.error('Error submitting the form', error);
+			alert('There was an issue sending your message.');
+		}
+
 		setFormData({
 			name: '',
 			email: '',
