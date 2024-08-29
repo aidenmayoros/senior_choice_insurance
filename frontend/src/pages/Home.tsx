@@ -22,13 +22,29 @@ const agents: Agent = {
 		number: '(866) 846-9802',
 		email: 'agency@srchoice.us',
 	},
-	'/jake': {
-		number: '(111) 123-4567',
-		email: 'jake@statefarm.com',
+	'/brandon': {
+		number: '(877) 529-0636',
+		email: 'brandon@srchoice.us',
 	},
-	'/aiden': {
-		number: '(222) 123-4567',
-		email: 'aiden@statefarm.com',
+	'/cressie': {
+		number: '(866) 724-4294',
+		email: 'cressie@srchoice.us',
+	},
+	'/kevin': {
+		number: '(866) 724-4810',
+		email: 'kevin@srchoice.us',
+	},
+	'/cristian': {
+		number: '(866) 724-4614',
+		email: 'cristian@srchoice.us',
+	},
+	'/ethan': {
+		number: '(866) 724-4809',
+		email: 'ethan@srchoice.us',
+	},
+	'/luke': {
+		number: '(866) 724-4616',
+		email: 'luke@srchoice.us',
 	},
 };
 
@@ -37,7 +53,15 @@ const Home: React.FC = () => {
 	const navigate = useNavigate();
 
 	const { pathname } = location;
-	const validPaths = ['/nick', '/jake', '/aiden'];
+	const validPaths = [
+		'/nick',
+		'/brandon',
+		'/cressie',
+		'/kevin',
+		'/cristian',
+		'/ethan',
+		'/luke',
+	];
 
 	const initialAgent = validPaths.includes(pathname)
 		? agents[pathname]
