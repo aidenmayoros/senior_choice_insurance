@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BackgroundImg from '../assets/images/footer_background.jpg';
+import { AgentDetails } from '../pages/Home';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+	agentDetails: AgentDetails;
+}
+
+const Footer: React.FC<FooterProps> = ({ agentDetails }) => {
 	return (
 		<footer
 			className='lg:bg-cover bg-center py-10'
@@ -14,11 +19,11 @@ const Footer: React.FC = () => {
 					<h2 className='text-3xl md:text-xl font-bold mb-2'>
 						Ready to get started?
 					</h2>
-					<p className='text-lg'>Dial 1-866-846-9802 to learn more today!</p>
+					<p className='text-lg'>{`Dial ${agentDetails.number} to learn more today!`}</p>
 				</div>
 				<div className='p-5'>
 					<h2 className='text-3xl md:text-xl font-bold'>Email Us</h2>
-					<p className='text-lg'>agency@srchoice.us</p>
+					<p className='text-lg'>{agentDetails.email}</p>
 				</div>
 				<div className='pt-5'>
 					<Link

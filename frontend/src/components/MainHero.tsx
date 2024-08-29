@@ -1,6 +1,12 @@
 import headerImg from '../assets/images/main_hero.jpg';
+import { AgentDetails } from '../pages/Home';
 
-const MainHero: React.FC = () => {
+// Define the props type for the component
+interface MainHeroProps {
+	agentDetails: AgentDetails;
+}
+
+const MainHero: React.FC<MainHeroProps> = ({ agentDetails }) => {
 	return (
 		<div
 			className=' h-screen w-full bg-cover bg-center'
@@ -19,7 +25,7 @@ const MainHero: React.FC = () => {
 					<a
 						href='tel:+1234567890'
 						className='px-4 py-2 bg-[#72F072] font-semibold rounded-md shadow-md hover:bg-green-700 hover:text-white transition duration-300'>
-						(866) 846-9802
+						{agentDetails.number}
 					</a>
 				</div>
 			</div>

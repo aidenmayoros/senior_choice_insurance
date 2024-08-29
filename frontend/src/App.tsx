@@ -10,9 +10,9 @@ function App() {
 		<Router>
 			<Navbar />
 			<Routes>
-				<Route path='/' element={<Home />} />
 				<Route path='/careers' element={<Career />} />
 				<Route path='/privacy-policy' element={<PrivacyPolicy />} />
+				<Route path='*' element={<Home />} />
 			</Routes>
 		</Router>
 	);

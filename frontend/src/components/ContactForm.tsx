@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const ContactForm: React.FC = () => {
 	const [formData, setFormData] = useState({
@@ -17,21 +18,24 @@ const ContactForm: React.FC = () => {
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
-		try {
-			const response = await fetch('/api/contact', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(formData),
-			});
+		// Cast e.target to HTMLFormElement
+		const form = e.target as HTMLFormElement;
 
-			if (response.ok) {
-				alert('Message sent successfully!');
-			} else {
-				alert('Failed to send the message. Please try again later.');
-			}
+		const formData = Object.fromEntries(new FormData(form).entries());
+
+		try {
+			await axios.post(
+				'https://www.form-to-email.com/api/s/88WbOOmXRqJc',
+				JSON.stringify(formData), // The request body
+				{
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				}
+			);
+			// Maybe show on the frontend somewhere that the form was successfully submitted?
 		} catch (error) {
+			// Maybe show on the frontend somewhere that the form DID NOT submit correctly?
 			console.error('Error submitting the form', error);
 			alert('There was an issue sending your message.');
 		}
